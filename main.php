@@ -73,11 +73,13 @@ function print_div($rss_array, $section_name)
     foreach($rss_array as $tech)
     {
         $rss_string = json_decode(json_encode(simplexml_load_string(make_rss_request($tech), 'SimpleXMLElement', LIBXML_NOCDATA)), true);
-        
         str_replace(array('<\![CDATA[',']]>'), '', $rss_string);
-        array_push($url_array, $rss_string);
-        $real_location = count($url_array)-1;
-        echo '<li><a data-toggle="tab" href="#'.$section_name.$real_location.'">'.$rss_string["channel"]["title"].'</a></li>';
+        if(!empty($rss_string["channel"]["title"]))
+        {
+            array_push($url_array, $rss_string);
+            $real_location = count($url_array)-1;
+            echo '<li><a data-toggle="tab" href="#'.$section_name.$real_location.'">'.$rss_string["channel"]["title"].'</a></li>';
+        }
     } 
     echo ' 
                         </ul>
