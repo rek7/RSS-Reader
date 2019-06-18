@@ -97,10 +97,16 @@ function print_div($rss_array, $section_name)
             {
                 echo '<div class="container">
                         <div class="panel panel-default">
-                          <div class="panel-heading">'.$article['title'].'</div>
-                            <div class="panel-body"><p><a href="'.$article["link"].'">Article link</a></p>
-                            <p>Date of publish: '.$article['pubDate'].'</p>
-                            </div>
+                      <div class="panel-heading">'.$article['title'].'</div>
+                            <div class="panel-body">';
+                            if(!empty($article['description'])) {
+                                echo '<p>'.$article['description'].'</p>';
+                            }
+                            echo '<p><a href="'.$article["link"].'">Article link</a></p>';
+                            if(!empty($article['pubDate'])) {
+                                echo '<p>Date of publish: '.$article['pubDate'].'</p>';
+                            }
+                            echo '</div>
                           </div>
                      </div>';
                  $count++;
@@ -122,10 +128,15 @@ function print_div($rss_array, $section_name)
             echo '<div class="container">
                     <div class="panel panel-default">
                       <div class="panel-heading">'.$article['title'].'</div>
-                        <div class="panel-body">'.$article['description'].'
-                        <p><a href="'.$article["link"].'">Article link</a></p>
-                        <p>Date of publish: '.$article['pubDate'].'</p>
-                        </div>
+                        <div class="panel-body">';
+                        if(!empty($article['description'])) {
+                            echo '<p>'.$article['description'].'</p>';
+                        }
+                        echo '<p><a href="'.$article["link"].'">Article link</a></p>';
+                        if(!empty($article['pubDate'])) {
+                            echo '<p>Date of publish: '.$article['pubDate'].'</p>';
+                        }
+                        echo '</div>
                       </div>
                  </div>';
         }
