@@ -3,7 +3,6 @@
 $tech_rss = array(
 "https://latesthackingnews.com/feed",
 "http://www.zdnet.com/blog/security/rss",
-"https://www.techworld.com/news/rss",
 "http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
 "https://www.bleepingcomputer.com/feed/",
 "https://blog.hackersonlineclub.com/feeds/posts/default?alt=rss",
@@ -13,7 +12,6 @@ $tech_rss = array(
 $business_rss = array(
 "https://cryptocurrencynews.com/feed/",
 "https://cointelegraph.com/feed",
-"http://rss.cnn.com/rss/money_latest.rss",
 "http://markets.businessinsider.com/rss/news",
 "http://feeds.bbci.co.uk/news/business/rss.xml",
 "https://www.investopedia.com/feedbuilder/feed/getfeed/?feedName=rss_headline",
