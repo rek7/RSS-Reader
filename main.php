@@ -146,6 +146,7 @@ function print_div($rss_array, $section_name)
     ';
 }
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <font color="white">
     
